@@ -1,0 +1,39 @@
+.Phrases{
+    position: absolute;
+    width: 777px;
+    height: 55px;
+    left: 132px;
+    top: 480px;
+    
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 51px;
+    display: flex;
+    align-items: flex-end;
+    
+    color: #000000;
+
+}
+.Button {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px;
+    gap: 10px;
+
+    position: absolute;
+    width: 301px;
+    height: 53px;
+    left: 132px;
+    top: 581px;
+
+    border: 1px solid #000000;
+    border-radius: 40px;
+}
