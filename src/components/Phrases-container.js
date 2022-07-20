@@ -29,24 +29,22 @@ function Phrases(){
         <div>
             <div className="Phrases">
 
-                {arrPhrases.map(phrase => ( 
-                    <span>
-
-                        {phrase}
-                        
-                    </span>
-                ))}
-                    
+                {arrPhrases[0]}                    
 
             </div>
             
-            <div className="Button">
-                Quiero perder más tiempo    
+            <div className="Submenu">
+                <ul class="Button">
+                    <li class="Button__item">
+                        <a href="index.html" class="Button__link">Quiero perder más tiempo</a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="Button__item">
+                        <a href="index.html" class="Button__link">LLévame al MEI</a>
+                    </li>
+                </ul>
             </div>
 
-            <div className="Button2">
-                Llévame al MEI
-            </div>
         </div>
     )
 
