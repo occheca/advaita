@@ -1,5 +1,7 @@
 import './Phrases-container.css';
 
+import React, { useState } from 'react';
+
 const arrPhrases = [
     "Jose Luna es irrelevante.", 
     "No deberías interesarte por él.",
@@ -20,17 +22,23 @@ const arrPhrases = [
     "Jose Luna estuvo en un túnel muy oscuro donde solo encontró una tenue luz interior."
 ]
 
+/*
 const delay = (ms) => new Promise(
     resolve => setTimeout(resolve, ms)
 );
+*/
 
 function Phrases(){
+    //https://es.reactjs.org/docs/hooks-state.html
+
+    const [count, setCount] = useState(0);
+
+    let myTimeout = setTimeout(()=>setCount(count+1), 4000); 
+ 
     return (
         <div>
             <div className="Phrases">
-
-                {arrPhrases[0]}                    
-
+                {arrPhrases[count]}
             </div>
             
             <div className="Submenu">
