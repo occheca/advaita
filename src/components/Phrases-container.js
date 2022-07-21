@@ -15,11 +15,14 @@ const arrPhrases = [
     "Él se pierde en la obviedad y se olvida de dejarse traspasar por la vida, en alma pero también en cuerpo.", 
     "Jose Luna vive en mundos demasiados alejados a este.", 
     "Él no sabe nada más de lo que tú sabes.", 
+    "Jose Luna es una persona libre.", 
     "A Jose Luna le gustaría pensar que es un visionario.", 
+    "Jose Luna es solo una capa muy superficial de su ser.",
     "Jose Luna es todo esto y nada (es la última mierda pegada al tacón de tu calzado)", 
     "Él solo quiere encontrar la estabilidad en la inestabilidad.", 
     "Jose Luna se marchará agradecido y en paz.", 
-    "Jose Luna estuvo en un túnel muy oscuro donde solo encontró una tenue luz interior."
+    "Jose Luna estuvo en un túnel muy oscuro donde solo encontró una tenue luz interior.", 
+    "El mensajero no es lo importante."
 ]
 
 /*
@@ -33,15 +36,17 @@ function Phrases(){
 
     const [count, setCount] = useState(0);
 
-    let myTimeout = setTimeout(()=>setCount(count+1), 4000); 
+    //let myTimeout = setTimeout(()=>setCount(count+1), 4000); 
  
     return (
         <div>
             <div className="Phrases">
+                {/*arrPhrases[count > count.length-1 ? count : count.length-1]*/}
                 {arrPhrases[count]}
+
             </div>
             
-            <div className="Button">
+            <div className="Button" onClick={()=>setCount(count+1)}>
                 Quiero perder más tiempo    
             </div>
 
