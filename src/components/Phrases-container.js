@@ -46,21 +46,16 @@ function Phrases(){
 
             </div>
             
-<<<<<<< HEAD
-            <div className="Button" onClick={()=>setCount(count+1)}>
-                Quiero perder más tiempo    
-=======
             <div className="Submenu">
                 <ul class="Button">
                     <li class="Button__item">
-                        <a href="index.html" class="Button__link">Quiero perder más tiempo</a>
+                        <div onClick={()=>setCount(count+1)} class="Button__link">Quiero perder más tiempo</div>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="Button__item">
                         <a href="index.html" class="Button__link">LLévame al MEI</a>
                     </li>
                 </ul>
->>>>>>> a769d44081c02474bb344a75d76f11a313656f02
             </div>
 
         </div>
