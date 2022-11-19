@@ -1,21 +1,28 @@
 import './App.css';
+
+import { Suspense, useState } from 'react';
+
 import Languages from './components/Languages.js';
-import Phrases from './components/Phrases-container.js';
 import Legal from './components/Legal.js';
 import Menu from './components/Menu.js';
-
+import Phrases from './components/Phrases.js';
 
 function App() {
+  const [theme, setTheme] = useState ("light"); 
+
   return (
-    <div className="App">
-      
+    <Suspense fcallback="Cargando Traducciones ...">
+      <div className={"App " + theme}>
+        
 
         <Languages></Languages>  
         <Menu></Menu>
-        <Phrases></Phrases>   
+        <Phrases setTheme ={setTheme}></Phrases>   
         <Legal></Legal>   
-     
-    </div>
+    
+      </div>
+
+    </Suspense>
   );
 }
 

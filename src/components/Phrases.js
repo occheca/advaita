@@ -1,4 +1,4 @@
-import './Phrases-container.css';
+import './Phrases.css';
 
 import React, { useState } from 'react';
 
@@ -31,11 +31,21 @@ const delay = (ms) => new Promise(
 );
 */
 
-function Phrases(){
+function Phrases( {
+    setTheme
+}){
     //https://es.reactjs.org/docs/hooks-state.html
 
     const [count, setCount] = useState(0);
 
+    const updateCount = () => {
+        if (count < arrPhrases.length-1) {
+            setCount(count +1); 
+        } else {
+            setTheme("dark");
+        }
+    }
+    
     //let myTimeout = setTimeout(()=>setCount(count+1), 4000); 
  
     return (
@@ -47,13 +57,13 @@ function Phrases(){
             </div>
             
             <div className="Submenu">
-                <ul class="Button">
-                    <li class="Button__item">
-                        <div onClick={()=>setCount(count+1)} class="Button__link">Quiero perder más tiempo</div>
+                <ul className="Button">
+                    <li className="Button__item">
+                        <div onClick={updateCount} className="Button__link">Quiero perder más tiempo</div>
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="Button__item">
-                        <a href="index.html" class="Button__link">LLévame al MEI</a>
+                    <li className="Button__item">
+                        <a href="index.html" className="Button__link">LLévame al MEI</a>
                     </li>
                 </ul>
             </div>

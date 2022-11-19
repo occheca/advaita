@@ -17,3 +17,9 @@
     color: #000000;
 }
 
+
+.dark .Languages {
+    color: whitesmoke; 
+    border-color: whitesmoke;
+    transition: all 2s ease;  
+}
